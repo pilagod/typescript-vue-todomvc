@@ -1,0 +1,29 @@
+{
+  "name": "typescript-vue-todomvc-minimized",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pilagod/typescript-vue-todomvc.git"
+  },
+  "author": "pilagod <pilagooood@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pilagod/typescript-vue-todomvc/issues"
+  },
+  "homepage": "https://github.com/pilagod/typescript-vue-todomvc#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "ts-loader": "^4.1.0",
+    "typescript": "^2.7.2",
+    "vue": "^2.5.16",
+    "vue-loader": "^14.2.1",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
+  }
+}
