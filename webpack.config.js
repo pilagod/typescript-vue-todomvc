@@ -8,7 +8,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['.ts', '.vue']
+    extensions: ['.js', '.ts', '.vue']
   },
   devtool: 'eval-source-map',
 
