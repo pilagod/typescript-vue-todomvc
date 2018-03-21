@@ -8,12 +8,30 @@
     <title>TypeScript Vue Todomvc</title>
 
     <link rel="stylesheet" href="node_modules/todomvc-app-css/index.css">
+    <style>
+        header>h1 {
+            width: 100%;
+            font-size: 100px;
+            font-weight: 100;
+            text-align: center;
+            color: rgba(175, 47, 47, 0.15);
+        }
+    </style>
 </head>
 
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header>
+        <h1>todos</h1>
+    </header>
+    <main class="todoapp">
+
+    </main>
+    <footer class="info">
+        <p>Double-click to edit a todo</p>
+        <p>Created by
+            <a target="_blank" href="https://github.com/pilagod/typescript-vue-todomvc">pilagod</a>
+        </p>
+    </footer>
 </body>
 <script src="dist/bundle.js"></script>
 
