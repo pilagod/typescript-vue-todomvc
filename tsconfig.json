@@ -1,9 +1,10 @@
 {
     "compilerOptions": {
-        "strict": true,
+        "experimentalDecorators": true, // https://github.com/vuejs/vue-class-component
         "module": "es2015",
         "moduleResolution": "node",
-        "target": "es5"
+        "strict": true,
+        "target": "es5",
     },
     "include": [
         "./src/**/*"

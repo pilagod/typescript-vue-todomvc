@@ -22,6 +22,7 @@
     "ts-loader": "^4.1.0",
     "typescript": "^2.7.2",
     "vue": "^2.5.16",
+    "vue-class-component": "^6.2.0",
     "vue-loader": "^14.2.1",
     "vue-template-compiler": "^2.5.16",
     "webpack": "^4.1.1",
