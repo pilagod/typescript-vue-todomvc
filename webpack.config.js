@@ -3,7 +3,7 @@ var path = require('path')
 module.exports = {
   entry: './src/index.ts',
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.join(__dirname, 'dist'),
     publicPath: '/dist/',
     filename: 'bundle.js'
   },
@@ -12,6 +12,11 @@ module.exports = {
   },
   devtool: 'eval-source-map',
 
+  devServer: {
+    contentBase: __dirname,
+    compress: true,
+    port: 8080
+  },
   module: {
     rules: [
       {
