@@ -1,7 +1,5 @@
-<template>
-    <div>
-        {{ message }}
-    </div>
+<template lang="pug">
+    main.todoapp {{ message }}
 </template>
 
 <script lang="ts">

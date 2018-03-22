@@ -20,6 +20,7 @@
   "homepage": "https://github.com/pilagod/typescript-vue-todomvc#readme",
   "devDependencies": {
     "css-loader": "^0.28.11",
+    "pug": "^2.0.3",
     "ts-loader": "^4.1.0",
     "typescript": "^2.7.2",
     "vue": "^2.5.16",
