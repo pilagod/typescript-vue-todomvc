@@ -24,13 +24,19 @@ import { DELETE_TODO } from "../store/todos/mutations";
 
 @Component
 export default class TodoList extends Vue {
+  /* props */
+
   @Prop() public todo: Todo;
+
+  /* data */
 
   public isEditing: boolean = false;
 
   public $refs: {
     edit: HTMLInputElement;
   };
+
+  /* methods */
 
   public startEditing() {
     this.isEditing = true;

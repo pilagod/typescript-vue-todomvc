@@ -13,7 +13,7 @@ import { Component } from "vue-property-decorator";
 /* components */
 import TodoItem from "./TodoItem.vue";
 
-/* mutations */
+/* todo's actions & mutations */
 import { Todo } from "../store/todos/state";
 import { UPDATE_ALL_TODOS_COMPLETED_STATE } from "../store/todos/mutations";
 

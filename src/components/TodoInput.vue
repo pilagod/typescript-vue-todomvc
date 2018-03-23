@@ -10,7 +10,11 @@ import { ADD_TODO } from "../store/todos/mutations";
 
 @Component
 export default class TodoInput extends Vue {
+  /* data */
+
   public title: string = "";
+
+  /* methods */
 
   public addTodo() {
     this.$store.commit(ADD_TODO, this.title);

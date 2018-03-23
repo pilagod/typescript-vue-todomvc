@@ -8,6 +8,8 @@
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
+
+/* components */
 import TodoFilter from "./TodoFilter.vue";
 import TodoInput from "./TodoInput.vue";
 import TodoList from "./TodoList.vue";
