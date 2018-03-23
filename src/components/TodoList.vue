@@ -1,7 +1,7 @@
 <template lang="pug">
     section.main
-        input#toggle-all.toggle-all(type='checkbox')
-        label(for='toggle-all') Mark all as complete
+        input#toggle-all.toggle-all(type="checkbox")
+        label(for="toggle-all") Mark all as complete
         ul.todo-list
           todo-item(v-for="(todo, index) in todos" v-bind:key="todo.title" v-bind:todo="todo")
 </template>

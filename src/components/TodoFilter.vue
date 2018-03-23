@@ -6,11 +6,11 @@
 
         ul.filters
           li
-            a(href='/' @click.prevent='') All
+            a(href="/" @click.prevent="") All
           li
-            a(href='/' @click.prevent='') Active
+            a(href="/" @click.prevent="") Active
           li
-            a(href='/' @click.prevent='') Completed
+            a(href="/" @click.prevent="") Completed
 
         button.clear-completed Clear completed
 </template>
