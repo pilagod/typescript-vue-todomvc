@@ -5,7 +5,7 @@
         div.view
             input.toggle(type="checkbox" v-model:checked="todo.completed")
             label(@dblclick="startEditing") {{ todo.title }}
-            button.destroy
+            button.destroy(@click="deleteTodo")
 
         input.edit(
             type="text" 
@@ -20,6 +20,7 @@
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
 import { Todo } from "../store/todos/state";
+import { DELETE_TODO } from "../store/todos/mutations";
 
 @Component
 export default class TodoList extends Vue {
@@ -37,6 +38,10 @@ export default class TodoList extends Vue {
     this.$nextTick(() => {
       this.$refs.edit.focus();
     });
+  }
+
+  public deleteTodo() {
+    this.$store.commit(DELETE_TODO, this.todo);
   }
 
   public updateTodo() {
