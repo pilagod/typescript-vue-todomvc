@@ -1,7 +1,7 @@
 <template lang="pug">
     footer.footer
         span.todo-count 
-          strong 1 
+          strong {{ count }} 
           span item left
 
         ul.filters
@@ -22,6 +22,9 @@ import { DELETE_COMPLETED_TODOS } from "../store/todos/mutations";
 
 @Component
 export default class TodoFilter extends Vue {
+  public get count(): number {
+    return this.$store.state.todos.todos.length;
+  }
   public deleteCompletedTodos() {
     this.$store.commit(DELETE_COMPLETED_TODOS);
   }
