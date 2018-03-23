@@ -3,21 +3,21 @@
         input#toggle-all.toggle-all(type='checkbox')
         label(for='toggle-all') Mark all as complete
         ul.todo-list
-          li(v-bind:class="{ completed: todo.completed }" v-for='(todo, index) in todos')
-            div.view
-              input.toggle(type='checkbox' v-model:checked="todo.completed")
-              label {{ todo.title }}
-              button.destroy
+          todo-item(v-for="(todo, index) in todos" v-bind:key="todo.title" v-bind:todo="todo")
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import { Todo } from "../store/todos/state";
-import { Component, Prop } from "vue-property-decorator";
+import { Component } from "vue-property-decorator";
+import TodoItem from "./TodoItem.vue";
 
-@Component
+@Component({
+  components: {
+    TodoItem
+  }
+})
 export default class TodoList extends Vue {
-  public get todos(): Todo[] {
+  public get todos() {
     return this.$store.state.todos.todos;
   }
 }
