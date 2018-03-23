@@ -3,9 +3,9 @@
         input#toggle-all.toggle-all(type='checkbox')
         label(for='toggle-all') Mark all as complete
         ul.todo-list
-          li(v-for='(todo, index) in todos')
+          li(v-bind:class="{ completed: todo.completed }" v-for='(todo, index) in todos')
             div.view
-              input.toggle(type='checkbox')
+              input.toggle(type='checkbox' v-model:checked="todo.completed")
               label {{ todo.title }}
               button.destroy
 </template>
