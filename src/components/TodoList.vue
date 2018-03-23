@@ -18,7 +18,7 @@ import { Component, Prop } from "vue-property-decorator";
 @Component
 export default class TodoList extends Vue {
   public get todos(): Todo[] {
-    return this.$store.state.todos;
+    return this.$store.state.todos.todos;
   }
 }
 </script>
