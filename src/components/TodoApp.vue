@@ -1,7 +1,7 @@
 <template lang="pug">
     section.todoapp 
       todo-input
-      todo-list(:todos="todos")
+      todo-list
       todo-filter
 </template>
 
@@ -20,8 +20,6 @@ import TodoList from "./TodoList.vue";
   }
 })
 export default class TodoApp extends Vue {
-  @Prop() public todos: object[];
-
   public message: string = "Hello World";
 }
 </script>

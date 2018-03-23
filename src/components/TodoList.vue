@@ -12,11 +12,14 @@
 
 <script lang="ts">
 import Vue from "vue";
+import { Todo } from "../store/todos/state";
 import { Component, Prop } from "vue-property-decorator";
 
 @Component
 export default class TodoList extends Vue {
-  @Prop() public todos: object[];
+  public get todos(): Todo[] {
+    return this.$store.state.todos;
+  }
 }
 </script>
 

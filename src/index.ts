@@ -1,11 +1,7 @@
 import Vue from 'vue'
+import store from './store'
 import TodoApp from './components/TodoApp.vue'
 
 new TodoApp({
-  propsData: {
-    todos: [{
-      title: 'Use Vue with TypeScript',
-      completed: false
-    }]
-  }
+  store
 }).$mount('main')
