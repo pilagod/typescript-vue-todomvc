@@ -18,7 +18,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
-import { Filter } from "../store/todos/state";
+import { Todo, Filter } from "../store/todos/state";
 import {
   DELETE_COMPLETED_TODOS,
   UPDATE_FILTER
@@ -33,7 +33,9 @@ export default class TodoFilter extends Vue {
   }
 
   public get count(): number {
-    return this.$store.getters.getFilteredTodos.length;
+    return this.$store.getters.getFilteredTodos.filter(
+      (todo: Todo) => !todo.completed
+    ).length;
   }
 
   public get isAll(): boolean {
