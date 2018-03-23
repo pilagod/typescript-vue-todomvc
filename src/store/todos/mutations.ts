@@ -5,6 +5,7 @@ import { State, Todo, Filter } from './state'
 export const ADD_TODO = 'ADD_TODO'
 export const DELETE_TODO = 'DELETE_TODO'
 export const DELETE_COMPLETED_TODOS = 'DELETE_COMPLETED_TODOS'
+export const UPDATE_ALL_TODOS_COMPLETED_STATE = 'UPDATE_ALL_TODOS_COMPLETED_STATE'
 
 /* filter */
 
@@ -26,6 +27,12 @@ export default {
 
   [DELETE_COMPLETED_TODOS](state: State) {
     state.todos = state.todos.filter((todo) => !todo.completed)
+  },
+
+  [UPDATE_ALL_TODOS_COMPLETED_STATE](state: State, completed: boolean) {
+    state.todos.forEach((todo) => {
+      todo.completed = completed
+    })
   },
 
   /* filter */
