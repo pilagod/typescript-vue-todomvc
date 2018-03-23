@@ -9,6 +9,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
+import { Todo } from "../store/todos/state";
 import TodoItem from "./TodoItem.vue";
 
 @Component({
@@ -17,8 +18,8 @@ import TodoItem from "./TodoItem.vue";
   }
 })
 export default class TodoList extends Vue {
-  public get todos() {
-    return this.$store.state.todos.todos;
+  public get todos(): Todo[] {
+    return this.$store.getters.getFilteredTodos;
   }
 }
 </script>
