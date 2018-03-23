@@ -19,9 +19,7 @@ import TodoList from "./TodoList.vue";
     TodoList
   }
 })
-export default class TodoApp extends Vue {
-  public message: string = "Hello World";
-}
+export default class TodoApp extends Vue {}
 </script>
 
 <style>
