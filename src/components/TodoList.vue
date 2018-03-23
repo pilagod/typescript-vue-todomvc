@@ -37,7 +37,7 @@ export default class TodoList extends Vue {
 
   public onToggleAllClicked() {
     // this.isToggleAllChecked haven't updated yet when checkbox is clicked,
-    // we should wait for next tick to get updated this.isToggleAllChecked
+    // we should wait for next tick to get updated value of this.isToggleAllChecked
     this.$nextTick(() => {
       this.$store.commit(
         UPDATE_ALL_TODOS_COMPLETED_STATE,
