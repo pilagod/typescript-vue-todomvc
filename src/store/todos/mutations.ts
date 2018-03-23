@@ -1,4 +1,4 @@
-import { State } from './state'
+import { State, Todo } from './state'
 
 export const ADD_TODO = 'ADD_TODO'
 
